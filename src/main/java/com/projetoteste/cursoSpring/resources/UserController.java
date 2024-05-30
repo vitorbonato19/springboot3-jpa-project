@@ -9,7 +9,7 @@ import com.projetoteste.cursoSpring.entities.User;
 
 @RestController
 @RequestMapping({"/users"})
-public class UserResource {
+public class UserController {
 	
 	@GetMapping
 	public ResponseEntity<User> findAll(){
