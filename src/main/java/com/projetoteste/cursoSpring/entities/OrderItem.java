@@ -3,6 +3,7 @@ package com.projetoteste.cursoSpring.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetoteste.cursoSpring.entities.pk.OrderitemPK;
 
 import jakarta.persistence.EmbeddedId;
@@ -33,6 +34,7 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 
+	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
 	}
